@@ -30,24 +30,21 @@ function getRandomChoice() {
 };
 
 function determineWinner(computerChoice, userChoice) {
-  if (userChoice == 'bomb') {
-    return 'The user won (by cheating)!';
-  };
+  switch (userChoice) {
+    case 'bomb':
+      return 'The user won (by cheating)!';
 
-  if (computerChoice == userChoice) {
-    return 'The game is a tie';
-  };
+    case computerChoice:
+      return 'The game is a tie';
 
-  if (computerChoice == 'rock') {
-    return (userChoice == 'paper') ? 'The user won!' : 'The computer won!';
-  };
+    case 'rock':
+      return (computerChoice === 'paper') ? 'The computer won!' : 'The user won!';
 
-  if (computerChoice == 'paper') {
-    return (userChoice == 'scissors') ? 'The user won!' : 'The computer won!';
-  };
+    case 'paper':
+      return (computerChoice === 'scissors') ? 'The computer won!' : 'The user won!';
 
-  if (computerChoice == 'scissors') {
-    return (userChoice == 'rock') ? 'The user won!' : 'The computer won!';
+    case 'scissors':
+      return (computerChoice === 'rock') ? 'The computer won!' : 'The user won!';
   };
 };
 
