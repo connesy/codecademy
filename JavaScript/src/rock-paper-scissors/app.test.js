@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { validChoices, getRandomChoice, determineWinner } = require('../src/app')
+const { validChoices, getRandomChoice, determineWinner } = require('./app')
 
 test('Get random choice returns valid choice', () => {
   expect(validChoices).toContain(getRandomChoice());

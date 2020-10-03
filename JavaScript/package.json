@@ -1,0 +1,13 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "JavaScript projects from CodeCademy",
+  "scripts": {
+    "test": "jest \"src/.*/*.test.js\""
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "prompt-sync": "^4.2.0"
+  }
+}
